@@ -140,7 +140,7 @@ Isso deve abrir automaticamente uma aba no navegador em
 ```
 Terminal 1 (backend)                 Terminal 2 (frontend)
 ─────────────────────                ─────────────────────
-$env:GEMINI_API_KEY="..."
+$env:GEMINI_API_KEY="AQ.Ab8RN6K8pqqvCKE7-bs7DW2b_kYk_AfMgnEjZHw1CVUJi_SISg"
 python -m uvicorn backend:app
   --reload --port 8000        ──►    python -m streamlit run frontend.py
 (deixe rodando)                      (deixe rodando, abre no navegador)
@@ -203,3 +203,18 @@ projeto completamente):
 2. Reinicie o backend (Ctrl+C no terminal e rode de novo).
 3. O frontend **não precisa de nenhuma mudança de código**, porque os campos
    do formulário são lidos automaticamente do `/schema` do backend.
+
+---
+
+## 📔 Diário de Bordo de Contribuições
+
+### Integrante 1: Pedro Folle
+-  Análise exploratória do dataset Breast Cancer Wisconsin; tratamento de valores ausentes e normalização dos dados; configuração inicial do ambiente Python com dependências.
+-  Implementação e treinamento dos modelos de classificação (KNN, MLP, Naive Bayes); comparação de desempenho; exportação dos artefatos (modelos e scaler) em `.joblib`.
+-  Testes unitários e validação dos modelos; documentação do código da Etapa A; revisão e correção de bugs no treinamento.
+
+### Integrante 2: Maicon Klitzke
+-  Desenvolvimento da API FastAPI com endpoints `/schema`, `/predict` e `/explain`; integração com Gemini API para explicações em linguagem natural.
+-  Criação da interface Streamlit com formulário dinâmico; conexão entre frontend e backend; testes de integração end-to-end.
+- Implementação de tratamento de erros e validação de entrada; ajustes de UI/UX no frontend; documentação completa do README e guia de uso.
+

@@ -178,7 +178,7 @@ def predict(req: PredictRequest):
 
     return {
         "predicao": resultado,
-        "probabilidade_malignidade": round(probabilidade, 4),
+        "probabilidade_malignidade": round(probabilidade, 6),
     }
 
 
